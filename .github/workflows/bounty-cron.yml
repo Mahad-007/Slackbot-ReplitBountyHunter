@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Call /scrape endpoint on Vercel
         run: |
-          curl -X GET "https://slackbot-a-bounty-hunter-1ixk3fgnt.vercel.app/scrape"
+          curl -X GET "https://slackbot-a-bounty-hunter-ih4j02km2.vercel.app/scrape"
