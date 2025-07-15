@@ -1,0 +1,14 @@
+name: Daily Bounty Scrape Trigger
+
+on:
+  schedule:
+    - cron: '0 3 * * *'  # Every day at 8 AM PKT (3 AM UTC)
+  workflow_dispatch:
+
+jobs:
+  ping-vercel-endpoint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call /scrape endpoint on Vercel
+        run: |
+          curl -X GET "https://slackbot-a-bounty-hunter-1ixk3fgnt.vercel.app/scrape"
